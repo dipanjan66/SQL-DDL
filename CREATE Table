@@ -1,0 +1,64 @@
+CREATE Table:- Syntax
+
+CREATE TABLE table_name (
+	column1 datatype,
+	column2 datatype,
+	column3 datatype,
+   ....
+);
+
+OR
+
+CREATE TABLE table_name (
+	column1 datatype column_constraint,
+	column2 datatype column_constraint,
+	column3 datatype column_constraint,
+     table_constraint
+   ....
+)INHERIT existing_table_name;
+
+---------------------------------------------------------------------------
+
+--SQL Create Table:===> Examples
+
+-- First Table:---------
+
+CREATE TABLE account(
+	user_id SERIAL PRIMARY KEY,
+	username varchar(50) UNIQUE NOT NULL,
+	password varchar(50) NOT NULL,
+	email varchar(250) NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+	last_login TIMESTAMP
+)
+
+
+-- See All the Columns in the Table:----
+
+SELECT * from account
+
+
+-- Second Table:-------------------------
+
+CREATE TABLE job(
+	job_id SERIAL PRIMARY KEY,
+	job_name varchar(250) UNIQUE NOT NULL
+)
+
+
+select * from job
+
+
+-- Third Table:--(Using Foreign key and those 2 Columns)----------
+
+CREATE TABLE account_job(
+	user_id INTEGER REFERENCES account(user_id),
+	job_id INTEGER REFERENCES job(job_id),
+	hire_date TIMESTAMP
+)
+
+
+select * from account_job
+
+
+
