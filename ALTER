@@ -1,0 +1,62 @@
+-- ALTER Table:-
+
+-- For Adding Dropping or Renaming Column
+
+-- Changing Columns Data Type
+
+-- Rename Table
+
+-- Syntax:==>
+
+-- 1)  ALTER TABLE - ADD Column:-
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+-- 2) ALTER TABLE - DROP COLUMN:-
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+-- 3) ALTER TABLE - RENAME COLUMN:-
+
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+--=========================================================
+
+-- Example 01:-
+
+create table information(
+	info_id SERIAL PRIMARY KEY,
+	title varchar(500) not null,
+	person varchar(55) unique not null
+)
+
+select * from information
+
+
+-- information Table Name Rename to new_info:-
+
+ALTER TABLE information
+RENAME TO new_info
+
+
+-- Rename Column Name of new_info Table:-
+
+ALTER TABLE new_info
+RENAME COLUMN person to people
+
+
+-- DROP NOT NULL Constraint:-
+
+ALTER TABLE new_info
+ALTER COLUMN people DROP not null
+
+-- SET NOT NULL Constraint:-
+
+ALTER TABLE new_info
+ALTER COLUMN people SET not null
+
+
+
