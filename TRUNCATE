@@ -1,0 +1,11 @@
+-- TRUNCATE TABLE
+-- The TRUNCATE TABLE command deletes the data inside a Table, but not the table itself. TRUNCATE don't Remove the Table.
+
+-- (NOTE:- But DROP command Remove entire Table or Remove complete Table).
+
+
+
+-- -- TRUNCATE TABLE - Syntax:-
+
+TRUNCATE Table table_name;
+
