@@ -1,0 +1,36 @@
+-- DROP completely Remove Columns in a Table
+
+-- DROP TABLE - Syntax:-
+
+-- DROP Table:-----
+
+ALTER Table table_name
+DROP TABLE table_name;
+
+OR
+
+
+-- DROP Column:-------
+
+ALTER Table table_name
+DROP column column_name;
+
+-- OR
+
+DROP column column_name CASCADE;
+
+
+
+-- DROP Multiple Column:--------------
+
+ALTER Table table_name
+DROP column column_one,
+DROP column column_two
+
+
+
+-- Check existance to avoid error:------
+
+ALTER Table table_name
+DROP column IF EXISTS column_name;
+
